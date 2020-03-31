@@ -259,7 +259,7 @@ void DAQController::ReadData(int link){
         fLog->Entry(MongoLog::Local, "Board %i has status 0x%04x",
             digi->bid(), board_status);
         int bid = digi->bid();
-        if (bid == 1253 || bid == 1163 || bid == 139) digi->SWTrigger();
+        if (bid == 1253 || bid == 1163 || bid == 139 || bid == 1390) digi->SWTrigger();
       }
       if (fCheckFails[digi->bid()]) {
         fCheckFails[digi->bid()] = false;
